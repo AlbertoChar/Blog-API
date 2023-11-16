@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "author": "Daniel Tom",
+        "title": "First Post",
+        "content": "This is one post, updated."
+    },
+    {
+        "id": 2,
+        "author": "Jane Doe",
+        "title": "Second Post",
+        "content": "This is another post."
+    },
+    {
+        "id": 3,
+        "author": "Alberto",
+        "title": "Third Post Edited",
+        "content": "This post was added with a POST request"
+    },
+    {
+        "id": 4,
+        "author": "Alberto Ch",
+        "title": "Fourth Post Added POST",
+        "content": "This post was added with a POST request"
+    },
+    {
+        "id": 5,
+        "author": null,
+        "title": "Hello",
+        "content": "World"
+    }
+]

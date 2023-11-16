@@ -42,11 +42,15 @@ function addPost() {
     var postTitle = document.getElementById('post-title').value;
     var postContent = document.getElementById('post-content').value;
 
+    // Use FormData to send the data as form data
+    var formData = new FormData();
+    formData.append('title', postTitle);
+    formData.append('content', postContent);
+
     // Use the Fetch API to send a POST request to the /posts endpoint
-    fetch(baseUrl + '/posts', {
+    fetch(baseUrl + '/posts/add', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title: postTitle, content: postContent })
+        body: formData  // Send the data as form data
     })
     .then(response => response.json())  // Parse the JSON data from the response
     .then(post => {
@@ -55,6 +59,7 @@ function addPost() {
     })
     .catch(error => console.error('Error:', error));  // If an error occurs, log it to the console
 }
+
 
 // Function to send a DELETE request to the API to delete a post
 function deletePost(postId) {
